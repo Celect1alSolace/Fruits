@@ -38,8 +38,53 @@ body{
     margin: 0 auto;
     padding: 0 20px;
 }
-.hero-section{
+.hero-bg{
     background-image: url(../images/hero-bg.png);
     background-repeat: no-repeat;
+    width: 100%;
     background-position: center;
+}
+.open-icon{
+    display: none;
+}
+.close-icon{
+    display: none;
+}
+.modal{
+    transform: scale(0);
+}
+@media(max-width:640px){
+    .open-icon{
+        display: inline-block;
+        border: none;
+        background-color: transparent;
+    }
+    .close-icon{
+        display: none;
+    }
+    .modal {
+        position: absolute;
+        right: 0;
+        left: 0;
+        margin: auto;
+        width: 60%;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        padding: 32px 0;
+        background-color: rgb(227, 222, 222);
+        border-radius: 5px;
+        transform: scale(0);
+        transition: all 0.3s;
+    }
+    .show{
+        transform: scale(1);
+    }
+    .hide{
+        transform: scale(0);
+    }
+    .close-show{
+        display: inline-block;
+    }
 }
